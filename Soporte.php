@@ -18,14 +18,13 @@ declare (strict_types= 1);
         public function getPrecio(): float{
             return $this->precio;
         }
+
         public function getPrecioConIVA(): float{
             return $this->getPrecio() + $this->getPrecio()*self::IVA;
         }
 
         public function muestraResumen():void{
-
         }
-
        
     }
 ?>
