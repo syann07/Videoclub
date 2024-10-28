@@ -7,7 +7,7 @@ declare (strict_types= 1);
 
         function __construct(
             public string $titulo, 
-            protected int $number,
+            protected int $numero,
             private float $precio){}
 
 
@@ -23,7 +23,13 @@ declare (strict_types= 1);
             return $this->getPrecio() + $this->getPrecio()*self::IVA;
         }
 
-        public function muestraResumen():void{
+        public function muestraResumen(): void{
+            echo "<br>";
+            var_dump($this->titulo);
+            echo "<br>";
+            var_dump($this->numero);
+            echo "<br>";
+            var_dump($this->precio); 
         }
        
     }
