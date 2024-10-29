@@ -8,7 +8,7 @@
         ){
             parent::__construct(
                 $titulo, $number, $precio
-            )
+            );
         }
 
         public function mostrarResumen(): void {
