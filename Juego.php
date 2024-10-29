@@ -16,8 +16,7 @@ class Juego extends Soporte{
         $this->consola = $consola;
 
         //comprobacion de jugadores
-
-        if($this->$maxNumJugadores >= $this-> $minNumJugadores && $this->$minNumJugadores > 0 && $this->$maxNumJugadores > 0){
+        if($this->maxNumJugadores >= $this->minNumJugadores && $this->minNumJugadores > 0 && $this->maxNumJugadores > 0) {
             $this->minNumJugadores = $minNumJugadores;
             $this->maxNumJugadores = $maxNumJugadores;
         }else{

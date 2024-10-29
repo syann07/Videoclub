@@ -50,6 +50,7 @@ class Cliente {
 
         $this->soportesAlquilados[$s->getNumero()] = $s;
         $this->numSoportesAlquilados++;
+        echo "<br> Soporte alquilado correctamente!";
         return true;
     }
 
