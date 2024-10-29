@@ -9,14 +9,23 @@ class Juego extends Soporte{
 
         //propiedades juego
         public string $consola, 
-        private int $minNumJugadores = 0, 
-        private int $maxNumJugadores = 0){
+        private int $minNumJugadores = 1, 
+        private int $maxNumJugadores = 1){
 
         parent::__construct($titulo,$numero, $precio);
         $this->consola = $consola;
-        $this->minNumJugadores = $minNumJugadores;
-        $this->maxNumJugadores = $maxNumJugadores;
-        //falta comprobar que max >= que min
+
+        //comprobacion de jugadores
+
+        if($this->$maxNumJugadores >= $this-> $minNumJugadores && $this->$minNumJugadores > 0 && $this->$maxNumJugadores > 0){
+            $this->minNumJugadores = $minNumJugadores;
+            $this->maxNumJugadores = $maxNumJugadores;
+        }else{
+            $this->minNumJugadores = 1;
+            $this->maxNumJugadores = $maxNumJugadores > 1 ? $maxNumJugadores : 1;  
+            //Si el minimo es 0 entra en el else y lo transforma a 1 y si el max es correcto lo deja como está, 
+            //anoser que también sea 0 (que pasan ambos al valor por defecto 1)
+        }
     }
 
     public function muestraJugadoresPosibles(): string{
@@ -43,6 +52,9 @@ class Juego extends Soporte{
         var_dump($this->minNumJugadores);
         echo "<br>";
         var_dump($this->maxNumJugadores);
+        
+        //Para imprimir echo es por consola por lo que es preferible pasar las etiquetas html a un php aparte y acceder a laa
+        //variables con ?=$nombre
     }
 }
 
