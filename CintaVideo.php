@@ -1,19 +1,20 @@
 <?php
+include_once("Soporte.php");
     class CintaVideo extends Soporte {
         public function __construct(
-            private int $duracion,
             string $titulo, 
             int $number,
-            float $precio
+            float $precio,
+            private int $duracion,
         ){
             parent::__construct(
                 $titulo, $number, $precio
             );
         }
 
-        public function mostrarResumen(): void {
-            parent::mostrarResumen();
-            var_dump($duracion);
+        public function muestraResumen(): void {
+            parent::muestraResumen();
+            var_dump($this->duracion);
         }
     }
 ?>
