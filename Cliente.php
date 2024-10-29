@@ -2,6 +2,7 @@
 
 declare(strict_types = 1);
 include_once("Soporte.php");
+
 class Cliente {
     private int $numSoportesAlquilados = 0;
     private array $soportesAlquilados = [];
@@ -48,7 +49,6 @@ class Cliente {
         }
 
         $this->soportesAlquilados[$s->getNumero()] = $s;
-        //$this->soportesAlquilados[] = $s;
         $this->numSoportesAlquilados++;
         return true;
     }
@@ -59,7 +59,6 @@ class Cliente {
 
             if ($soporte->getNumero() == $numSoporte) {
                 unset($this->soportesAlquilados[$numSoporte]);
-                //array_splice($this->soportesAlquilados, $i, 0);
                 $this->numSoportesAlquilados--;
                 echo "<br> Se ha devuelto correctamente!";
                 return true;
@@ -77,7 +76,6 @@ class Cliente {
         }
     }
 
-    
 }
 
 ?>
