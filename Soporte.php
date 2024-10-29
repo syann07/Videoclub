@@ -1,7 +1,8 @@
 <?php
 declare (strict_types= 1);
+include_once("Resumible.php");
 
-    class Soporte{
+    abstract class Soporte implements Resumible{
 
         const IVA = 0.21;
 
@@ -31,6 +32,11 @@ declare (strict_types= 1);
             echo "<br>";
             var_dump($this->precio); 
         }
-       
+        
+        
+       //Si la clase abstracta implementa una interfaz, tienes que implementar o bien el metodo en la clase padre 
+       //o en todos los hijos
+
+       //Si la clase no es abstracta tiene que implentar el metodo la clase padre.  
     }
 ?>

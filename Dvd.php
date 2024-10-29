@@ -24,6 +24,7 @@ include_once("Soporte.php");
             echo "<br>";
             var_dump($this->formatPantalla);
         }
+       
     }
 
 ?>

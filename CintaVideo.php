@@ -16,5 +16,6 @@ include_once("Soporte.php");
             parent::muestraResumen();
             var_dump($this->duracion);
         }
+      
     }
 ?>

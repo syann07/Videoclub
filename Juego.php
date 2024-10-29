@@ -55,6 +55,7 @@ class Juego extends Soporte{
         //Para imprimir echo es por consola por lo que es preferible pasar las etiquetas html a un php aparte y acceder a laa
         //variables con ?=$nombre
     }
+
 }
 
 ?>
