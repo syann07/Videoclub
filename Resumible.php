@@ -2,7 +2,7 @@
 
     interface Resumible{
 
-        public function resumemelo();
+        public function muestraResumen();
 
     }
 ?>
