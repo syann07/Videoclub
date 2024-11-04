@@ -70,7 +70,7 @@ include_once("CintaVideo.php");
             return false;
         }
 
-        public function alquilaSocioProducto(int $numeroSocio, int $numeroSoporte) {
+        public function alquilaSocioProducto(int $numeroSocio, int $numeroSoporte): Videoclub {
             // Ver si el soporte y el socio existe
             if (!$this->verificarClave($this->productos, $numeroSoporte)) {
                 echo "No existe ese producto!";
@@ -83,7 +83,7 @@ include_once("CintaVideo.php");
                     $this->numProductos--;
                 }                
             }
-
+            return $this;
         }
 }
 ?>

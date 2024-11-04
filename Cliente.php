@@ -38,20 +38,20 @@ class Cliente {
         return false;
     }
 
-    public function alquilar(Soporte $s): bool  {
+    public function alquilar(Soporte $s): Cliente  {
         if ($this->tieneAlquilado($s)) {
             echo "<br> ¡Soporte ya alquilado!";
-            return false;
         }
         else if (count($this->soportesAlquilados) >= $this->maxAlquilerConcurrente) {
             echo "<br> ¡Máximo de soportes alquilados superado!";
-            return false;
+        }
+        else {
+            $this->soportesAlquilados[$s->getNumero()] = $s;
+            $this->numSoportesAlquilados++;
+            echo "<br> Soporte alquilado correctamente!";
         }
 
-        $this->soportesAlquilados[$s->getNumero()] = $s;
-        $this->numSoportesAlquilados++;
-        echo "<br> Soporte alquilado correctamente!";
-        return true;
+        return $this;
     }
 
     public function devolver(int $numSoporte): bool {
